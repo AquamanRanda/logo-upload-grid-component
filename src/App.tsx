@@ -9,7 +9,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Setup />} />
         <Route path="/viewer" element={<Viewer />} />
-        {/* Catch-all route for 404 Not Found */}
       </Routes>
     </Router>
   );
