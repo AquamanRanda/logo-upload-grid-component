@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import LogoUploadBox from '../components/LogoUploadBox';
+import React, { useEffect, useState } from "react";
+import LogoUploadBox from "../components/LogoUploadBox";
 
 interface LogoState {
   [key: string]: string | null;
@@ -19,7 +19,7 @@ export default function Viewer() {
   // Poll localStorage for changes
   useEffect(() => {
     const checkForUpdates = () => {
-      const savedState = localStorage.getItem('logoState');
+      const savedState = localStorage.getItem("logoState");
       if (savedState) {
         const state: LogoSyncState = JSON.parse(savedState);
         setLogos(state.logos);
@@ -41,9 +41,11 @@ export default function Viewer() {
   const handleImageSelect = () => {};
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4">
+    <div className="min-h-screen bg-gray-50 py-12 px-4 bg-transparent">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-2xl font-bold text-center mb-8 text-gray-800">Live Results Viewer</h1>
+        <h1 className="text-2xl font-bold text-center mb-8 text-gray-800">
+          Live Results Viewer
+        </h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
           {Object.keys(logos).map((id) => (
             <LogoUploadBox
