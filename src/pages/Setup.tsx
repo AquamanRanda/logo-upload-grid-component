@@ -33,7 +33,7 @@ function Setup() {
   const availableBoxCount = Object.keys(logos).length - drawnBoxes.size;
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4">
+    <div className="min-h-screen py-12 px-4 bg-transparent">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center mb-12">
           {Object.keys(logos).map((id) => (
